@@ -14,27 +14,27 @@ body{
     height: 90vh;
     margin: 0 auto;
     display: flex;
-    background-image: url('sliderImages/82508wd3qbahj3514xfnbfx7ogzr_1576928476_biking_in_spiti.jpg');
+    background-image: url('AllimagesinHere/sliderimages/Bike-Trip-to-Leh-Ladakh.jpg');
     background-size: 100% 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    animation: changeImage 30s forwards infinite;
+    animation: changeImage 30s ease forwards infinite;
 }
 @keyframes changeImage {
 
     0%{
-        background-image: url('sliderImages/82508wd3qbahj3514xfnbfx7ogzr_1576928476_biking_in_spiti.jpg');
+        background-image: url('AllimagesinHere/sliderimages/Bike-Trip-to-Leh-Ladakh.jpg');
     }
     25%{
-        background-image: url('sliderImages/Bike-Trip-to-Leh-Ladakh.jpg');
+        background-image: url('AllimagesinHere/sliderimages/cover-1052.jpg');
     }
     50%{
-        background-image: url('sliderImages/cover-1052.jpg');
+        background-image: url('AllimagesinHere/sliderimages/Ladakh-2021-1536x1027.jpg');
     }
     75%{
-        background-image: url('sliderImages/Ladakh-2021-1536x1027.jpg');
+        background-image: url('AllimagesinHere/sliderimages/Leh-Ladakh-Bike-Trip.jpeg');
     }
     100%{
-        background-image: url('sliderImages/Leh-Ladakh-Bike-Trip.jpeg');
+        background-image: url('AllimagesinHere/sliderimages/82508wd3qbahj3514xfnbfx7ogzr_1576928476_biking_in_spiti.jpg');
     }
     
 }
