@@ -10,7 +10,7 @@ function emptyInputSignup($fullname, $username, $useremail, $userpassword, $pass
 }
 
 function invalidUId($username){
-    if(preg_match("/^[a-zA-Z0-9_!#$]*$/", $username)){
+    if(preg_match("/^[a-zA-Z0-9]*$/", $username)){
         return true;
     }else{
         return false;
@@ -58,7 +58,7 @@ function UidExists($conn, $username, $useremail){
 }
 
 function createUser($conn,$fullname, $username, $useremail, $userpassword, $passwordrepeat){
-    $sql = "INSER INTO riderlogs (FULLNAME, USERNAME, USEREMAIL, USERPSWD) VALUES (?,?,?,?);";
+    $sql = "INSERT INTO riderlogs (FULLNAME, USERNAME, USEREMAIL, USERPSWD) VALUES (?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -72,7 +72,7 @@ function createUser($conn,$fullname, $username, $useremail, $userpassword, $pass
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    header("location: ../page.html?error=none");
+    header("location: ../index.php?error=none");
 }
 
 function emptyInputlogin($username, $userpassword){
@@ -104,7 +104,7 @@ function loginTheUser($conn, $username, $userpassword){
         $_SESSION["RIDERID_Sessionname"] = $uidExists["USERPSWD"];
         $_SESSION["USERNAME_Sessionname"] = $uidExists["USERNAME"];
 
-        header("location: ../MainPage.php");
+        header("location: ../index.php");
         exit();
     }
 }
